@@ -1,7 +1,16 @@
-#using a try and except
-try:
-    number = int(input("Enter a number"))
-    print("The number entered is", number)
-#using value error
-except ValueError as ex:
-    print("Exception:", ex)
+import random #importing module
+playing = True #initialise
+number = str(random.randint(0,9)) #random in-built function
+
+print("I will generate a number from 0 to 9, and you have toguess the number one digi at a time")
+print("The game ends when you get 1 hero!")
+#iterate loop till the confition is true
+while playing:
+    guess = input("Give me your best guess! \n")
+    if number == guess:
+        print("You win the game")
+        print("The number was",number)
+        break
+
+    else:
+        print("Your guess isn't quite right, try again.")
